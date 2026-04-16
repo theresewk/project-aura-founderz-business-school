@@ -77,7 +77,7 @@ Structure your appraisal using the following XML-style markers for frontend pars
 `;
 
 export const ANALYSIS_STEPS = [
-  { id: 0, label: "Initializing Clinical Evidence Engine", description: "Loading MEDIPHI inference model and EBM knowledge base...", progress: 8 },
+  { id: 0, label: "Initializing Clinical Evidence Engine", description: "Loading AURA evidence engine and EBM knowledge base...", progress: 8 },
   { id: 1, label: "Parsing PICO Framework", description: "Extracting Population, Intervention, Comparison, Outcome elements...", progress: 25 },
   { id: 2, label: "Evaluating Methodology & Study Design", description: "Assessing randomization protocol, blinding, and sample size adequacy...", progress: 45 },
   { id: 3, label: "Verifying Clinical Significance & P-Values", description: "Calculating NNT, ARR, RRR and validating statistical thresholds...", progress: 65 },

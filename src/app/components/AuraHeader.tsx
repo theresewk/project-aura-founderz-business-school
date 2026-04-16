@@ -36,7 +36,7 @@ export function AuraHeader({ analysisComplete }: AuraHeaderProps) {
             style={{
               color: "#F0F7EE",
               fontSize: "11px",
-              backgroundColor: analysisComplete ? "#0f5f6b" : "#0f5f6b",
+              backgroundColor: "#0f5f6b",
             }}
             className="flex items-center gap-1"
           >
@@ -101,7 +101,7 @@ export function AuraHeader({ analysisComplete }: AuraHeaderProps) {
               }}
               className="hidden sm:block"
             >
-              Evidence-Based Medicine · Critical Appraisal Demo
+              Evidence-Based Medicine - Critical Appraisal Demo
             </p>
           </div>
         </div>
@@ -124,7 +124,7 @@ export function AuraHeader({ analysisComplete }: AuraHeaderProps) {
         style={{ backgroundColor: "#17737e", borderTop: "1px solid #2aa4b3" }}
         className="px-4 md:px-8 py-1.5 flex items-center gap-2"
       >
-        {["Research Tools", "Critical Appraisal", "MEDIPHI Engine"].map((item, i, arr) => (
+        {["Research Workspace", "Critical Appraisal", "AURA Engine"].map((item, i, arr) => (
           <span key={item} className="flex items-center gap-2">
             <span
               style={{

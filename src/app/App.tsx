@@ -135,6 +135,7 @@ export default function App() {
   const isBusy = isAnalyzing;
   const enabledChecks = Object.values(config).filter(Boolean).length;
   const activeAnalysisSteps = buildAnalysisSteps(config);
+  const currentStepDisplay = Math.min(currentStep + 1, activeAnalysisSteps.length);
 
   return (
     <div
@@ -174,7 +175,7 @@ export default function App() {
               </div>
             )}
 
-            {(isBusy || isComplete) && (
+            {isBusy && (
               <ProgressIndicator
                 currentStep={currentStep}
                 isComplete={isComplete}
@@ -299,7 +300,7 @@ export default function App() {
                 </div>
                 <div style={{ padding: "12px 14px" }}>
                   {[
-                    { label: "Inference Model", value: "MEDIPHI-PubMed" },
+                    { label: "Inference Model", value: "AURA Demo Model" },
                     { label: "Framework", value: "PE2 / EBM v3.1" },
                     { label: "Bias Tool", value: "Cochrane RoB 2.0" },
                     { label: "Deployment Mode", value: "Public Demo", color: "#f59e0b" },
@@ -333,17 +334,13 @@ export default function App() {
 
                 <div
                   style={{
-                    backgroundColor: "#fffbeb",
-                    borderTop: "1px solid #fde68a",
+                    borderTop: "1px solid #e5e7eb",
                     padding: "8px 14px",
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "8px",
+                    backgroundColor: "#fafafa",
                   }}
                 >
-                  <AlertCircle size={12} style={{ color: "#d97706", flexShrink: 0, marginTop: "1px" }} />
-                  <p style={{ fontSize: "10px", color: "#92400e", lineHeight: "1.4" }}>
-                    <strong>Public demo build.</strong> This deployment is configured to present the cached appraisal experience used for reviews and video demos.
+                  <p style={{ fontSize: "10px", color: "#6b7280", lineHeight: "1.4" }}>
+                    Demo mode uses a stable cached appraisal so the review experience stays consistent across sessions.
                   </p>
                 </div>
               </div>
@@ -386,8 +383,7 @@ export default function App() {
                   {isAnalyzing ? (
                     <>
                       <RefreshCw size={16} style={{ animation: "spin 1s linear infinite" }} />
-                      Generating Demo - Step {Math.min(currentStep + 1, ANALYSIS_STEPS.length)}/
-                      {ANALYSIS_STEPS.length}
+                      Generating Demo - Step {currentStepDisplay}/{activeAnalysisSteps.length}
                     </>
                   ) : (
                     <>
@@ -473,50 +469,6 @@ export default function App() {
                 </div>
               )}
 
-              <div
-                style={{
-                  backgroundColor: "#ffffff",
-                  border: "1px solid #d1d5db",
-                  borderTop: "2px solid #C4D7F2",
-                  padding: "12px 14px",
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "10px",
-                    fontWeight: 700,
-                    color: "#0f4c7a",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    marginBottom: "6px",
-                  }}
-                >
-                  Responsible AI Notice
-                </p>
-                <p style={{ fontSize: "11px", color: "#525252", lineHeight: "1.5" }}>
-                  AURA is designed for research assistance only. Outputs do not replace peer
-                  review or clinical expertise. Align usage with your institution&apos;s AI governance
-                  and data privacy policies.
-                </p>
-                <div style={{ marginTop: "8px", display: "flex", gap: "6px" }}>
-                  {["Transparency", "Reliability", "Safety"].map((tag) => (
-                    <span
-                      key={tag}
-                      style={{
-                        fontSize: "9px",
-                        fontWeight: 700,
-                        color: "#1D8A99",
-                        border: "1px solid #C4D7F2",
-                        padding: "2px 6px",
-                        letterSpacing: "0.06em",
-                        backgroundColor: "#e8f4f6",
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>

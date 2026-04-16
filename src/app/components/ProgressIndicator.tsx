@@ -50,7 +50,7 @@ export function ProgressIndicator({
         <div className="flex items-center gap-2">
           <Cpu size={13} style={{ color: "#1D8A99" }} />
           <span style={{ color: "#8b949e", fontSize: "11px", letterSpacing: "0.04em" }}>
-            MEDIPHI ENGINE - ANALYSIS LOG
+            AURA ENGINE - ANALYSIS LOG
           </span>
         </div>
         <div className="flex items-center gap-3">
@@ -98,13 +98,13 @@ export function ProgressIndicator({
         <div style={{ display: "flex", gap: "10px", marginBottom: "6px" }}>
           <span style={{ color: "#4a9eff", fontSize: "11px" }}>SYS</span>
           <span style={{ color: "#6e7681", fontSize: "11px" }}>
-            MEDIPHI inference engine initialised - SYSTEM_PROMPT loaded (2,847 tokens)
+            AURA evidence engine initialised - structured appraisal template loaded
           </span>
         </div>
         <div style={{ display: "flex", gap: "10px", marginBottom: "6px" }}>
           <span style={{ color: "#4a9eff", fontSize: "11px" }}>SYS</span>
           <span style={{ color: "#6e7681", fontSize: "11px" }}>
-            EBM knowledge base v4.2 - Cochrane RoB 2.0 framework active
+            EBM review rules active - Cochrane RoB 2.0 framework enabled
           </span>
         </div>
 
