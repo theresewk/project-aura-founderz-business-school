@@ -1,2 +1,11 @@
-# project-aura-founderz-business-school
-AURA is a medical research intelligence dashboard demo for structured critical appraisal of clinical studies. Users can paste a study abstract, choose which appraisal checks to run, and review a tailored evidence summary covering PICO elements, bias risk, statistical outcomes, NNT metrics, and conflict-of-interest signals. Demo only.
+
+  # Medical Research Intelligence Dashboard
+
+  This is a code bundle for Medical Research Intelligence Dashboard. The original project is available at https://www.figma.com/design/EX36y243CXfpSAz8E0zgzC/Medical-Research-Intelligence-Dashboard.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  
